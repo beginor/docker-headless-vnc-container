@@ -2,7 +2,7 @@
 
 FROM ubuntu:16.04
 
-MAINTAINER Tobias Schneck "tobias.schneck@consol.de"
+LABEL MAINTAINER="Tobias Schneck 'tobias.schneck@consol.de'"
 ENV REFRESHED_AT 2018-03-27
 
 LABEL io.k8s.description="Headless VNC Container with Xfce window manager, firefox and chromium" \
@@ -47,6 +47,9 @@ RUN $INST_SCRIPTS/no_vnc.sh
 
 ### Install firefox and chrome browser
 RUN $INST_SCRIPTS/chrome.sh
+
+### Install mono node and vscode
+RUN $INST_SCRIPTS/mono-node-vscode.sh
 
 ### Install xfce UI
 RUN $INST_SCRIPTS/xfce_ui.sh
