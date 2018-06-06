@@ -25,5 +25,5 @@ apt-get install -y --no-install-recommends mono-devel msbuild code git-core node
 # cleanup
 apt-get remove -y curl apt-transport-https
 apt-get purge -y curl apt-transport-https
-apt-get autoremove
+apt-get autoremove -y
 rm -rf /var/lib/apt/lists/*
